@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataformas Web proyecto_1</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <header>
-        <h1>Cursos</h1>
+        <div id="animationCabezera">
+            <h1>Cursos</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="#inicio"> Inicio</a></li>
@@ -20,78 +21,58 @@
         </nav>
     </header>
     <section class="cuerpo" id="inicio">
-    
         <h2 class="titulos">Acerca de los cursos</h2>
-        <p>
-            Los cursos son unas herramientas que brindan ayuda a nuevas generaciones de programadores
-        </p>    
+        <p>Los cursos son unas herramientas que brindan ayuda a nuevas generaciones de programadores.</p>    
     </section>
     
     <section class="cuerpo" id="cursos">
-        <h2>
-            Cursos Disponibles
-        </h2>
+        <h2>Cursos Disponibles</h2>
+        <div id="listaCursos"></div>
     </section>
+
     <section id="agregarNuevoCurso">
         <div class="form-container">
-          <h2>Agregar Nuevo Curso</h2>
-          <form id="nuevoCursoForm">
-            <div class="form-group">
-              <label for="nombreCurso">Nombre del Curso</label>
-              <input type="text" id="nombreCurso" name="nombreCurso" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="nombreProfesor">Nombre del Profesor</label>
-              <input type="text" id="nombreProfesor" name="nombreProfesor" required>
-            </div>
-      
-            <div class="form-group">
-              <label for="fechaInicio">Fecha de Inicio</label>
-              <input type="date" id="fechaInicio" name="fechaInicio" required>
-            </div>
-      
-            <div class="form-group">
-              <label for="fechaFin">Fecha de Fin</label>
-              <input type="date" id="fechaFin" name="fechaFin" required>
-            </div>
-      
-            <div class="form-group">
-              <label for="descripcion">Descripción</label>
-              <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-            </div>
-      
-            <button type="submit" class="btn-submit">Agregar Curso</button>
-          </form>
+            <h2>Agregar Nuevo Curso</h2>
+            <form id="nuevoCursoForm">
+                <div class="form-group">
+                    <label for="nombreCurso">Nombre del Curso</label>
+                    <input type="text" id="nombreCurso" name="nombreCurso" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombreProfesor">Nombre del Profesor</label>
+                    <input type="text" id="nombreProfesor" name="nombreProfesor" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaInicio">Fecha de Inicio</label>
+                    <input type="date" id="fechaInicio" name="fechaInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaFin">Fecha de Fin</label>
+                    <input type="date" id="fechaFin" name="fechaFin" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Agregar Curso</button>
+            </form>
         </div>
     </section>
-      
+
     <section class="cuerpo" id="contactos">
         <h2 class="titulos">Contactos</h2>
         <ul>
-            <li>
-                Correo electrónico: 
-                <label >
-                    <a href="mailto:email@ups.edu.ec" id="redes">email@ups.edu.ec</a>
-                </label>
-            </li>
-            <li>
-                Número telefónico : 
-                <label> 0912345678 </label>
-            </li>
+            <li>Correo electrónico: <a href="mailto:email@ups.edu.ec">email@ups.edu.ec</a></li>
+            <li>Número telefónico: <a href="//web.whatsapp.com/">0912345678</a></li>
         </ul>
-        
-        
-        <h3>
-            Nuestras redes sociales
-        </h3>
+        <h3>Nuestras redes sociales</h3>
         <ul>
-            <label>
-                <li><a href="//www.instagram.com" class="redes">Instagram</a></li>
-                <li><a href="//www.facebook.com" class="redes">Facebook</a></li>
-                <li><a href="//www.x.com" class="redes">X</a></li>
-            </label>
+            <li><img src="insta.png" class="logoImagen"><a href="//www.instagram.com" class="redes">Instagram</a></li>
+            <li><img src="facebook.png" class="logoImagen"><a href="//www.facebook.com" class="redes">Facebook</a></li>
+            <li><img src="x.png" class="logoImagen"><a href="//www.x.com" class="redes">X</a></li>
         </ul>        
     </section>
+
+    <script src="scipt.js"></script>
 </body>
 </html>
