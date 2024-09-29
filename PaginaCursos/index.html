@@ -10,44 +10,59 @@
 <body>
     <header>
         <h1>Cursos</h1>
-        <p>
-            Cursos en linea de la carrrera de computacion 
-        </p>
+        <nav>
+            <ul>
+                <li><a href="#inicio"> Inicio</a></li>
+                <li><a href="#cursos"> Cursos</a></li>
+                <li><a href="#agregarNuevoCurso"> Agregar Cursos</a></li>
+                <li><a href="#contactos"> Contactos</a></li>
+            </ul>
+        </nav>
     </header>
-    <div id="cuerpo">
+    <section class="cuerpo" id="inicio">
+    
         <h2 class="titulos">Acerca de los cursos</h2>
         <p>
             Los cursos son unas herramientas que brindan ayuda a nuevas generaciones de programadores
-        </p>
-        <h2 class="titulos" >
+        </p>    
+    </section>
+    <section class="cuerpo" id="agregarNuevoCurso">
+        <h2 class="titulos">
+            Agregar un nuevo curso
+        </h2>
+        <input type="text" id="nombreCurso" placeholder="Nombre del Curso" required>
+        <input type="text" id="nombreInstructor" placeholder="Nombre del Curso" required>
+        <input type="date" id="Fecha"  required>
+
+        <textarea id="descripcion" placeholder="Descripcion del Curso" required> </textarea>
+            
+        <button id="crearCurso" class="buttones">
+            Crear curso
+        </button>
+    </section>
+    <section class="cuerpo" id="cursos">
+        <h2>
+            Cursos Disponibles
+        </h2>
+    </section>
+    <nav class="cuerpo" id="contactos">
+        <h2 class="titulos">
             Contactos
         </h2>
         <p class="contactos">
-            Correo electronico : <a href="mailto:email@ups.edu.ec">email@ups.edu.ec</a>
+            Correo electrónico: <a href="mailto:email@ups.edu.ec" id="redes">email@ups.edu.ec</a>
         </p>
         <p class="contactos">
-            Numero telefonico : 0912345678 
+            Número telefónico : 0912345678 
         </p>
         <h3>
             Nuestras redes sociales
         </h3>
-        <p class="contactos">
-            <a href="//www.instagram.com" class="redes">instagram</a>
-            <a href="//www.facebook.com" class="redes">facebook</a>
-            <a href="//www.x.com" class="redes">x</a>
-        </p>        
-    </div>
-    
-    <div id = "nuevoCurso">
-        <h2 class="titulos" >
-            Agregar un nuevo curso
-            
-        </h2>
-        <button id="crearCurso" class="buttons"> 
-            Crear Curso
-        </button>
-
-    </div>
-    
+        <ul>
+            <li><a href="//www.instagram.com" class="redes">Instagram</a></li>
+            <li><a href="//www.facebook.com" class="redes">Facebook</a></li>
+            <li><a href="//www.x.com" class="redes">X</a></li>
+        </ul>        
+    </nav>
 </body>
 </html>
