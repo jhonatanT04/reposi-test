@@ -26,43 +26,72 @@
             Los cursos son unas herramientas que brindan ayuda a nuevas generaciones de programadores
         </p>    
     </section>
-    <section class="cuerpo" id="agregarNuevoCurso">
-        <h2 class="titulos">
-            Agregar un nuevo curso
-        </h2>
-        <input type="text" id="nombreCurso" placeholder="Nombre del Curso" required>
-        <input type="text" id="nombreInstructor" placeholder="Nombre del Curso" required>
-        <input type="date" id="Fecha"  required>
-
-        <textarea id="descripcion" placeholder="Descripcion del Curso" required> </textarea>
-            
-        <button id="crearCurso" class="buttones">
-            Crear curso
-        </button>
-    </section>
+    
     <section class="cuerpo" id="cursos">
         <h2>
             Cursos Disponibles
         </h2>
     </section>
-    <nav class="cuerpo" id="contactos">
-        <h2 class="titulos">
-            Contactos
-        </h2>
-        <p class="contactos">
-            Correo electrónico: <a href="mailto:email@ups.edu.ec" id="redes">email@ups.edu.ec</a>
-        </p>
-        <p class="contactos">
-            Número telefónico : 0912345678 
-        </p>
+    <section id="agregarNuevoCurso">
+        <div class="form-container">
+          <h2>Agregar Nuevo Curso</h2>
+          <form id="nuevoCursoForm">
+            <div class="form-group">
+              <label for="nombreCurso">Nombre del Curso</label>
+              <input type="text" id="nombreCurso" name="nombreCurso" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="nombreProfesor">Nombre del Profesor</label>
+              <input type="text" id="nombreProfesor" name="nombreProfesor" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="fechaInicio">Fecha de Inicio</label>
+              <input type="date" id="fechaInicio" name="fechaInicio" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="fechaFin">Fecha de Fin</label>
+              <input type="date" id="fechaFin" name="fechaFin" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="descripcion">Descripción</label>
+              <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+      
+            <button type="submit" class="btn-submit">Agregar Curso</button>
+          </form>
+        </div>
+    </section>
+      
+    <section class="cuerpo" id="contactos">
+        <h2 class="titulos">Contactos</h2>
+        <ul>
+            <li>
+                Correo electrónico: 
+                <label >
+                    <a href="mailto:email@ups.edu.ec" id="redes">email@ups.edu.ec</a>
+                </label>
+            </li>
+            <li>
+                Número telefónico : 
+                <label> 0912345678 </label>
+            </li>
+        </ul>
+        
+        
         <h3>
             Nuestras redes sociales
         </h3>
         <ul>
-            <li><a href="//www.instagram.com" class="redes">Instagram</a></li>
-            <li><a href="//www.facebook.com" class="redes">Facebook</a></li>
-            <li><a href="//www.x.com" class="redes">X</a></li>
+            <label>
+                <li><a href="//www.instagram.com" class="redes">Instagram</a></li>
+                <li><a href="//www.facebook.com" class="redes">Facebook</a></li>
+                <li><a href="//www.x.com" class="redes">X</a></li>
+            </label>
         </ul>        
-    </nav>
+    </section>
 </body>
 </html>
