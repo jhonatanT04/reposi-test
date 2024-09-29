@@ -11,6 +11,10 @@ header{
     padding: 2rem 0;
     
 }
+p{
+    padding: 2rem;
+    justify-content: right;
+}
 h1{
     font-size: 2.2rem
     
@@ -209,6 +213,9 @@ ul li {
     margin: -13px 0;
 }
 
+/*Animacion de cursos*/
+
+
 
 .curso {
     background-color: #ffffff;
@@ -217,12 +224,27 @@ ul li {
     padding: 20px;
     margin-bottom: 20px;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform 0.8s ease, opacity 0.8s ease; 
+    opacity: 1;
     width: 300px;
     text-align: center;
     display: inline-block;
     margin-right: 20px;
+    animation: aparecer 0.8s ease forwards; 
 }
+
+
+@keyframes aparecer {
+    from {
+        transform: translateZ(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
 
 .curso:hover {
     transform: translateY(-5px);
@@ -283,9 +305,20 @@ ul li {
     display: none;
 }
 
+
+
+.eliminando {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Aplicamos la transición */
+}
+
+
 #listaCursos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
 }
+

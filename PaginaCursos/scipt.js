@@ -8,13 +8,16 @@ document.getElementById("nuevoCursoForm").addEventListener("submit", function(ev
     const fechaFin = new Date(document.getElementById("fechaFin").value);
     const descripcion = document.getElementById("descripcion").value.trim();
 
-    //Validar los campos
+    // Validar que todos los campos estén llenos
     if (!nombreCurso || !nombreProfesor || !fechaInicio || !fechaFin || !descripcion) {
         alert("Por favor, completa todos los campos.");
         return;
     }
-    //calculo de la duracion del curso
-    const duracionCurso = Math.ceil((fechaFin - fechaInicio) / (1000 * 60 * 60 * 24));    
+
+    // Calcular duración del curso en días
+    const duracionCurso = Math.ceil((fechaFin - fechaInicio) / (1000 * 60 * 60 * 24));
+
+    // Crear el contenedor del curso
     const cursoDiv = document.createElement("div");
     cursoDiv.classList.add("curso");
 
@@ -40,12 +43,15 @@ document.getElementById("nuevoCursoForm").addEventListener("submit", function(ev
     // Limpiar el formulario
     document.getElementById("nuevoCursoForm").reset();
 
-    // eliminar el curso
+    // Funcionalidad para eliminar el curso con animación
     cursoDiv.querySelector(".eliminar").addEventListener("click", function() {
-        cursoDiv.remove();
+        cursoDiv.classList.add("eliminando");
+        setTimeout(() => {
+            cursoDiv.remove(); 
+        }, 500); 
     });
 
-    // Funcion para mostrar/ocultar detalles
+    // Funcionalidad para mostrar/ocultar detalles
     cursoDiv.querySelector(".ver-mas").addEventListener("click", function() {
         const detalles = cursoDiv.querySelector(".detalles-curso");
         if (detalles.style.display === "none") {
@@ -55,4 +61,35 @@ document.getElementById("nuevoCursoForm").addEventListener("submit", function(ev
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Función para eliminar un curso con animación
+    function eliminarCurso(cursoDiv) {
+        cursoDiv.classList.add("eliminando"); 
+        setTimeout(() => {
+            cursoDiv.remove(); 
+        }, 500);
+    }
+
+    
+    function toggleDetalles(detalles) {
+        detalles.style.display = detalles.style.display === "none" || detalles.style.display === "" ? "block" : "none";
+    }
+
+    
+    document.querySelectorAll(".eliminar").forEach(button => {
+        button.addEventListener("click", function () {
+            const cursoDiv = button.closest(".curso");
+            eliminarCurso(cursoDiv);
+        });
+    });
+
+    document.querySelectorAll(".ver-mas").forEach(button => {
+        button.addEventListener("click", function () {
+            const detalles = button.nextElementSibling;
+            toggleDetalles(detalles);
+        });
+    });
+});
+
 
