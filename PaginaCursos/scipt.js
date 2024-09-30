@@ -14,7 +14,7 @@ document.getElementById("nuevoCursoForm").addEventListener("submit", function(ev
         return;
     }
 
-    // Calcular duración del curso en días
+    // Calcular duración del curso en dias
     const duracionCurso = Math.ceil((fechaFin - fechaInicio) / (1000 * 60 * 60 * 24));
 
     // Crear el contenedor del curso
@@ -51,7 +51,7 @@ document.getElementById("nuevoCursoForm").addEventListener("submit", function(ev
         }, 500); 
     });
 
-    // Funcionalidad para mostrar/ocultar detalles
+    // Funcion para mostrar/ocultar detalles
     cursoDiv.querySelector(".ver-mas").addEventListener("click", function() {
         const detalles = cursoDiv.querySelector(".detalles-curso");
         if (detalles.style.display === "none") {
@@ -62,21 +62,21 @@ document.getElementById("nuevoCursoForm").addEventListener("submit", function(ev
     });
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
     // Función para eliminar un curso con animación
     function eliminarCurso(cursoDiv) {
         cursoDiv.classList.add("eliminando"); 
         setTimeout(() => {
             cursoDiv.remove(); 
-        }, 500);
+        }, 500); 
     }
 
-    
     function toggleDetalles(detalles) {
         detalles.style.display = detalles.style.display === "none" || detalles.style.display === "" ? "block" : "none";
     }
 
-    
+
     document.querySelectorAll(".eliminar").forEach(button => {
         button.addEventListener("click", function () {
             const cursoDiv = button.closest(".curso");
@@ -91,5 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
 
 
